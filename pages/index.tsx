@@ -6,6 +6,7 @@ import { TextBlock } from '@/components/TextBlock';
 import { OpenAIModel, TranslateBody } from '@/types/types';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import {UploadButton} from '@/components/UploadButton';
 
 export default function Home() {
   const [inputLanguage, setInputLanguage] = useState<string>('JavaScript');
@@ -31,7 +32,7 @@ export default function Home() {
     }
 
     if (!inputCode) {
-      alert('Please enter some code.');
+      alert('Please enter some code or upload a file.');
       return;
     }
 
@@ -113,6 +114,11 @@ export default function Home() {
     localStorage.setItem('apiKey', value);
   };
 
+  const handleFileUpload = (contents: string) => {
+    setInputCode(contents);
+    setHasTranslated(false);
+  }
+
   useEffect(() => {
     if (hasTranslated) {
       handleTranslate();
@@ -181,16 +187,18 @@ export default function Home() {
               }}
             />
 
-            {inputLanguage === 'Natural Language' ? (
-              <TextBlock
-                text={inputCode}
-                editable={!loading}
-                onChange={(value) => {
-                  setInputCode(value);
-                  setHasTranslated(false);
-                }}
-              />
-            ) : (
+          {inputLanguage === 'Natural Language' ? (
+            <TextBlock
+              text={inputCode}
+              editable={!loading}
+              onChange={(value) => {
+                setInputCode(value);
+                setHasTranslated(false);
+              }}
+            />
+          ) : (
+            <>
+              <UploadButton onUpload={handleFileUpload} />
               <CodeBlock
                 code={inputCode}
                 editable={!loading}
@@ -199,7 +207,8 @@ export default function Home() {
                   setHasTranslated(false);
                 }}
               />
-            )}
+            </>
+          )}
           </div>
           <div className="mt-8 flex h-full flex-col justify-center space-y-2 sm:mt-0 sm:w-2/4">
             <div className="text-center text-xl font-bold">Output</div>

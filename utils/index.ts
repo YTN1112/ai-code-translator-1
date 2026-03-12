@@ -10,7 +10,7 @@ const createPrompt = (
   inputCode: string,
 ) => {
     return endent`
-      You are an expert programmer in all programming languages. You just recived  the "${inputLanguage}" code. Refractor it and give me justifcation for the refracorting you did and where. Do not include \`\`\`.
+      You are an expert programmer in all programming languages. You just recived  the "${inputLanguage}" code. Refractor it and give me justifcation for the refractoring on what you did, where you did it, and give justifcation for each refactored section. Do not include \`\`\`.
   
       
       ${inputLanguage} code:

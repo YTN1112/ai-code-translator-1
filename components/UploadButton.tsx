@@ -1,6 +1,7 @@
 import React, { useRef, useState, ChangeEvent } from 'react'
 
-const UploadButton = () => {
+
+const UploadButton = ({ onUpload }: { onUpload: (contents: string) => void }) => {
   const [uploadError, setUploadError] = useState('')
   const uploadRef = useRef<HTMLInputElement>(null)
 
@@ -11,14 +12,10 @@ const UploadButton = () => {
     const file = e.target.files[0]
 
     if (file) {
-      if (file.type !== 'text/csv') {
-        setUploadError('Please upload a .csv file')
-      }
 
       const fileReader = new FileReader()
       fileReader.onload = (event) => {
-        const contents = event?.target?.result
-        // do something with the file contents here
+        onUpload(event?.target?.result as string)
       }
 
       e.target.value = ''
@@ -27,7 +24,6 @@ const UploadButton = () => {
       setUploadError('File could not be uploaded. Please try again.')
     }
   }
-
   return (
     <>
       {/* style this however you like */}
@@ -44,3 +40,5 @@ const UploadButton = () => {
     </>
   )
 }
+
+export { UploadButton }
