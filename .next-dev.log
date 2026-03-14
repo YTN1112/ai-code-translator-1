@@ -1,0 +1,66 @@
+
+> code-translate@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.56:3000
+
+✓ Starting...
+Creating turbopack project {
+  dir: 'C:\\Users\\toan_\\OneDrive\\Documents\\GitHub\\ai-code-translator-1',
+  testMode: true
+}
+✓ Ready in 804ms
+ GET / 200 in 834ms (compile: 813ms, render: 21ms)
+ GET / 200 in 30ms (compile: 11ms, render: 20ms)
+ POST /api/translate 200 in 5.7s
+✓ Compiled in 27ms
+✓ Compiled in 20ms
+ GET / 500 in 477ms (compile: 392ms, render: 86ms)
+ GET / 200 in 43ms (compile: 34ms, render: 9ms)
+✓ Compiled in 25ms
+ GET / 200 in 7ms (compile: 2ms, render: 5ms)
+ GET / 200 in 10ms (compile: 3ms, render: 7ms)
+ GET / 200 in 8ms (compile: 3ms, render: 5ms)
+ GET / 200 in 6ms (compile: 2ms, render: 4ms)
+ GET / 200 in 18ms (compile: 4ms, render: 14ms)
+ POST /api/translate 500 in 3.6s
+ POST /api/translate 500 in 1045ms
+ POST /api/translate 500 in 289ms
+ GET / 200 in 15ms (compile: 4ms, render: 11ms)
+✓ Compiled in 18ms
+ POST /api/translate 200 in 14.1s
+ GET / 200 in 67ms (compile: 48ms, render: 19ms)
+ POST /api/translate 500 in 593ms
+ POST /api/translate 200 in 6.5s
+ POST /api/translate 200 in 8.0s
+✓ Compiled in 14ms
+ GET / 200 in 81ms (compile: 60ms, render: 21ms)
+ POST /api/translate 500 in 1086ms
+ POST /api/translate 200 in 6.2s
+✓ Compiled in 29ms
+ GET / 200 in 96ms (compile: 62ms, render: 34ms)
+ GET / 200 in 23ms (compile: 9ms, render: 14ms)
+ POST /api/translate 200 in 6.5s
+✓ Compiled in 15ms
+ POST /api/translate 200 in 6.0s
+ GET / 200 in 87ms (compile: 67ms, render: 20ms)
+ POST /api/translate 200 in 7.0s
+✓ Compiled in 10ms
+ POST /api/translate 200 in 6.4s
+✓ Compiled in 13ms
+ GET / 200 in 89ms (compile: 70ms, render: 20ms)
+ POST /api/translate 200 in 2.6s
+✓ Compiled in 11ms
+ GET / 200 in 86ms (compile: 68ms, render: 18ms)
+ GET / 200 in 11ms (compile: 4ms, render: 7ms)
+✓ Compiled in 13ms
+✓ Compiled in 66ms
+ GET / 200 in 99ms (compile: 76ms, render: 23ms)
+✓ Compiled in 21ms
+ GET / 200 in 114ms (compile: 73ms, render: 41ms)
+✓ Compiled in 15ms
+ GET / 200 in 80ms (compile: 59ms, render: 20ms)
+✓ Compiled in 428ms
+✓ Compiled in 596ms

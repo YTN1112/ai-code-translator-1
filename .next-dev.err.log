@@ -1,0 +1,130 @@
+ReferenceError: outputLanguage is not defined
+    at Home (pages\index.tsx:137:7)
+  135 |       handleTranslate();
+  136 |     }
+> 137 |   }, [outputLanguage]);
+      |       ^
+  138 |
+  139 |   useEffect(() => {
+  140 |     const apiKey = localStorage.getItem('apiKey');
+⨯ ReferenceError: outputLanguage is not defined
+    at Home (pages\index.tsx:137:7)
+  135 |       handleTranslate();
+  136 |     }
+> 137 |   }, [outputLanguage]);
+      |       ^
+  138 |
+  139 |   useEffect(() => {
+  140 |     const apiKey = localStorage.getItem('apiKey');
+⨯ ReferenceError: outputLanguage is not defined
+    at Home (pages\index.tsx:137:7)
+  135 |       handleTranslate();
+  136 |     }
+> 137 |   }, [outputLanguage]);
+      |       ^
+  138 |
+  139 |   useEffect(() => {
+  140 |     const apiKey = localStorage.getItem('apiKey'); {
+  page: '/'
+}
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+Error: OpenAI API returned an error: {
+  "error": {
+    "message": "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.",
+    "type": "invalid_request_error",
+    "param": "temperature",
+    "code": 
+    at OpenAIStream (utils\index.ts:53:11)
+    at async handler (pages\api\translate.ts:13:20)
+  51 |     const statusText = res.statusText;
+  52 |     const result = await res.body?.getReader().read();
+> 53 |     throw new Error(
+     |           ^
+  54 |       `OpenAI API returned an error: ${
+  55 |         decoder.decode(result?.value) || statusText
+  56 |       }`, {
+  
+}
+Error: OpenAI API returned an error: {
+  "error": {
+    "message": "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.",
+    "type": "invalid_request_error",
+    "param": "temperature",
+    "code": "
+    at OpenAIStream (utils\index.ts:53:11)
+    at async handler (pages\api\translate.ts:13:20)
+  51 |     const statusText = res.statusText;
+  52 |     const result = await res.body?.getReader().read();
+> 53 |     throw new Error(
+     |           ^
+  54 |       `OpenAI API returned an error: ${
+  55 |         decoder.decode(result?.value) || statusText
+  56 |       }`, {
+  
+}
+Error: OpenAI API returned an error: {
+  "error": {
+    "message": "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.",
+    "type": "invalid_request_error",
+    "param": "temperature",
+    "code": "
+    at OpenAIStream (utils\index.ts:53:11)
+    at async handler (pages\api\translate.ts:13:20)
+  51 |     const statusText = res.statusText;
+  52 |     const result = await res.body?.getReader().read();
+> 53 |     throw new Error(
+     |           ^
+  54 |       `OpenAI API returned an error: ${
+  55 |         decoder.decode(result?.value) || statusText
+  56 |       }`, {
+  
+}
+Error: OpenAI API returned an error: {
+  "error": {
+    "message": "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.",
+    "type": "invalid_request_error",
+    "param": "temperature",
+    "code": 
+    at OpenAIStream (utils\index.ts:54:11)
+    at async handler (pages\api\translate.ts:13:20)
+  52 |     const statusText = res.statusText;
+  53 |     const result = await res.body?.getReader().read();
+> 54 |     throw new Error(
+     |           ^
+  55 |       `OpenAI API returned an error: ${
+  56 |         decoder.decode(result?.value) || statusText
+  57 |       }`, {
+  
+}
+Error: OpenAI API returned an error: {
+    "error": {
+        "message": "The model `gpt-5.3` does not exist or you do not have access to it.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "model_not_found"
+    }
+}
+
+    at OpenAIStream (utils\index.ts:54:11)
+    at async handler (pages\api\translate.ts:13:20)
+  52 |     const statusText = res.statusText;
+  53 |     const result = await res.body?.getReader().read();
+> 54 |     throw new Error(
+     |           ^
+  55 |       `OpenAI API returned an error: ${
+  56 |         decoder.decode(result?.value) || statusText
+  57 |       }`, {
+  
+}
+Error: aborted
+    at ignore-listed frames {
+  code: 'ECONNRESET'
+}
+⨯ uncaughtException: Error: aborted
+    at ignore-listed frames {
+  code: 'ECONNRESET'
+}
+⨯ uncaughtException:  Error: aborted
+    at ignore-listed frames {
+  code: 'ECONNRESET'
+}
